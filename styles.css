@@ -407,15 +407,17 @@ section[id]{
 
 /* Make the toggle icon visible in dark mode */
 .icon-btn{ color: #ffe680; }
-[data-theme="light"] .icon-btn{ color: var(--text); }
+[data-theme="light"] .icon-btn{ color: #b8860b; }
 
 /* Prevent quick snapshot tags from overlapping */
 .card__tags{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;
-  margin-top:14px;
+  gap:10px;
+  margin-top:16px;
+  align-items:flex-start;
 }
+.card__tags .tag{ position:relative; z-index:1; }
 .card__tags .tag{ display:inline-flex; }
 
 /* Make the theme symbols look crisp */
@@ -424,3 +426,5 @@ section[id]{
   line-height: 1;
   transform: translateY(-1px);
 }
+
+.tag{ line-height: 1.2; }
