@@ -391,3 +391,36 @@ strong{ font-weight:600; }
   .nav__links a, .nav__links .pill{ width:100%; }
   .icon-btn{ width:100%; }
 }
+
+/* Improve anchor scrolling with sticky header */
+section[id]{
+  scroll-margin-top: 84px;
+}
+#page-top{ scroll-margin-top: 0; }
+
+/* Theme toggle icon visibility + contrast */
+.theme-icon{ display:inline-flex; }
+.icon-sun{ display:inline-flex; }
+.icon-moon{ display:none; }
+[data-theme="light"] .icon-sun{ display:none; }
+[data-theme="light"] .icon-moon{ display:inline-flex; }
+
+/* Make the toggle icon visible in dark mode */
+.icon-btn{ color: #ffe680; }
+[data-theme="light"] .icon-btn{ color: var(--text); }
+
+/* Prevent quick snapshot tags from overlapping */
+.card__tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+.card__tags .tag{ display:inline-flex; }
+
+/* Make the theme symbols look crisp */
+.theme-icon{
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(-1px);
+}

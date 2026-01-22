@@ -61,4 +61,12 @@
     const isInside = links.contains(target) || toggle.contains(target);
     if (!isInside) close();
   });
+
+  // Brand click: always go to true top (prevents header cut-off)
+  const brand = document.querySelector(".brand");
+  brand?.addEventListener("click", (e) => {
+    // Let the hash update, but force a clean top scroll
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 })();
+
