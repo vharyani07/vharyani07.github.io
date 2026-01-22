@@ -428,3 +428,45 @@ section[id]{
 }
 
 .tag{ line-height: 1.2; }
+
+
+/* Project card media */
+.project-card{
+  position: relative;
+  overflow: hidden;
+}
+.project-media{
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--bg), transparent 70%);
+  margin-bottom: 14px;
+}
+.project-media img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 920px){
+  .project-media img{ height: 190px; }
+}
+
+/* Make whole card clickable without breaking buttons */
+.card__overlay{
+  position:absolute;
+  inset:0;
+  border-radius: var(--radius);
+  z-index: 0;
+}
+.project-card > *{
+  position: relative;
+  z-index: 1;
+}
+.project-card:hover{
+  transform: translateY(-2px);
+}
+.project-card:focus-within{
+  outline: 2px solid color-mix(in oklab, var(--accent), transparent 35%);
+  outline-offset: 2px;
+}
