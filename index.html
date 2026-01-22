@@ -1,10 +1,352 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Vivak’s Portfolio</title>
-  </head>
-  <body>
-    <h1>Vivak Haryani</h1>
-    <p>My portfolio is coming soon 🚀</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vivak Haryani • Software Developer</title>
+  <meta name="description" content="Vivak Haryani — Software Developer. Projects in Three.js, UI/UX prototyping, and an AI-guided data science pipeline. UW–Madison CS (Dec 2024)." />
+  <meta name="theme-color" content="#0b0f17" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vivak Haryani • Portfolio" />
+  <meta property="og:description" content="Projects: 3D Soccer Match (Three.js), Calendar-UI (HCI/Figma), Data Science Pipeline (NumPy/Pandas/SQL/PyTorch)." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="header" data-elevate>
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__mark" aria-hidden="true">VH</span>
+        <span class="brand__text">Vivak Haryani</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav__links" data-navlinks>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="pill" href="./assets/Vivak_Haryani_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme" title="Toggle theme">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM2 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm18 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1ZM4.22 4.22a1 1 0 0 1 1.42 0l.7.7a1 1 0 1 1-1.41 1.42l-.71-.7a1 1 0 0 1 0-1.42Zm13.44 13.44a1 1 0 0 1 1.42 0l.7.7a1 1 0 1 1-1.41 1.42l-.71-.7a1 1 0 0 1 0-1.42ZM19.78 4.22a1 1 0 0 1 0 1.42l-.7.7a1 1 0 1 1-1.42-1.41l.7-.71a1 1 0 0 1 1.42 0ZM6.34 17.66a1 1 0 0 1 0 1.42l-.7.7a1 1 0 1 1-1.42-1.41l.7-.71a1 1 0 0 1 1.42 0Z"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="top" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Software Developer • UW–Madison CS (Dec 2024)</p>
+          <h1 class="hero__title">
+            Building clean, practical software — from <span class="grad">UI prototypes</span> to <span class="grad">data pipelines</span>.
+          </h1>
+          <p class="hero__subtitle">
+            I’m Vivak. I like shipping projects that are clear, usable, and reliable — and I enjoy iterating from first prototype to working implementation.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn" href="./assets/Vivak_Haryani_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+          </div>
+
+          <div class="hero__links" aria-label="Social links">
+            <a class="link" href="https://github.com/vharyani07" target="_blank" rel="noopener">
+              <span class="dot" aria-hidden="true"></span> GitHub
+            </a>
+            <a class="link" href="https://www.linkedin.com/in/vivak-haryani/" target="_blank" rel="noopener">
+              <span class="dot" aria-hidden="true"></span> LinkedIn
+            </a>
+            <a class="link" href="mailto:vivak1719@gmail.com">
+              <span class="dot" aria-hidden="true"></span> Email
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="card glass">
+            <div class="card__top">
+              <p class="card__kicker">Quick snapshot</p>
+              <p class="card__headline">What I’m about</p>
+            </div>
+
+            <ul class="bullets">
+              <li><strong>Strengths:</strong> problem-solving, iteration, clean code, communication</li>
+              <li><strong>Interests:</strong> software engineering, HCI, AI/ML foundations</li>
+              <li><strong>Recent focus:</strong> Three.js scenes, UI prototyping → web builds, modular DS learning</li>
+            </ul>
+
+            <div class="card__tags" aria-label="Key skills">
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GCP</span>
+              <span class="tag">Three.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Featured projects</h2>
+          <p class="muted">
+            A few highlights that show range: 3D graphics, HCI + prototyping, and data science fundamentals.
+          </p>
+        </div>
+
+        <div class="grid cards">
+          <!-- Research Project -->
+          <article class="card">
+            <div class="card__topline">
+              <span class="pill small">Three.js • Graphics</span>
+              <span class="muted small">3D Soccer Match</span>
+            </div>
+            <h3>Dynamic 3D soccer match (Three.js)</h3>
+            <p class="muted">
+              A simple, dynamic 3D model of a soccer match using core 3D principles (rendering, shadows, materials, textures) built with Three.js.
+            </p>
+            <div class="stack">
+              <span class="chip">Three.js</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML/CSS</span>
+              <span class="chip">3D modeling</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn small" href="https://github.com/vharyani07/Research-Project" target="_blank" rel="noopener">Repo</a>
+              <a class="btn small ghost" href="https://github.com/vharyani07/Research-Project#readme" target="_blank" rel="noopener">Demo/README</a>
+            </div>
+          </article>
+
+          <!-- Calendar UI -->
+          <article class="card">
+            <div class="card__topline">
+              <span class="pill small">HCI • Design → Build</span>
+              <span class="muted small">Calendar-UI</span>
+            </div>
+            <h3>Calendar‑Notepad UI prototype</h3>
+            <p class="muted">
+              End-to-end HCI design process: user research → journey maps → low‑fi → high‑fi Figma prototype → HTML/CSS/JS implementation.
+            </p>
+            <div class="stack">
+              <span class="chip">Figma</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">Prototyping</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn small" href="https://github.com/vharyani07/Calendar-UI" target="_blank" rel="noopener">Repo</a>
+              <a class="btn small ghost" href="https://github.com/vharyani07/Calendar-UI#readme" target="_blank" rel="noopener">Process/README</a>
+            </div>
+          </article>
+
+          <!-- Data Science Project -->
+          <article class="card">
+            <div class="card__topline">
+              <span class="pill small">AI/ML • Fundamentals</span>
+              <span class="muted small">Data Science Pipeline</span>
+            </div>
+            <h3>AI-guided data science learning pipeline</h3>
+            <p class="muted">
+              A structured, hands‑on project that builds DS/ML fundamentals through progressive exercises across NumPy, Pandas, SQL, and visualization — moving toward customer segmentation & sales prediction analysis.
+            </p>
+            <div class="stack">
+              <span class="chip">NumPy</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">SQL</span>
+              <span class="chip">PyTorch</span>
+              <span class="chip">Visualization</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn small" href="https://github.com/vharyani07/Data-Science-project" target="_blank" rel="noopener">Repo</a>
+              <a class="btn small ghost" href="https://github.com/vharyani07/Data-Science-project#readme" target="_blank" rel="noopener">Overview/README</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="note">
+          <p class="muted small">
+            Tip: add screenshots to each repo README and I can wire them into these cards for a more “premium” feel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Experience</h2>
+          <p class="muted">Work that shows both software and real-world operations/support.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <span class="pill">Deerhold</span>
+              <span class="muted">Software Development Intern • Jun 2022 – Aug 2022 • Remote (Hoffman Estates, IL)</span>
+            </div>
+            <ul class="bullets">
+              <li>Created a personal website utilizing JavaScript and React.</li>
+              <li>Built a To‑Do app that forms a dynamic list based on user input.</li>
+              <li>Communicated weekly with senior leadership to align company goals with progress.</li>
+            </ul>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <span class="pill">Jackson Hewitt Tax Service</span>
+              <span class="muted">Technical Support & Administrative Assistant • May 2018 – Present • Hoffman Estates, IL</span>
+            </div>
+            <ul class="bullets">
+              <li>Supported daily operations and client experience contributing to a 4.9 Google rating and 34%+ new-client growth (most recent tax season).</li>
+              <li>Coordinated client scheduling and office calendar; provided professional phone support for client questions.</li>
+              <li>Installed/configured software, including drive mapping to ensure network connectivity.</li>
+              <li>Troubleshot technical issues to keep operations running smoothly.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p class="muted">A quick, scannable snapshot (the way recruiters read it).</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3 class="h4">Languages</h3>
+            <div class="stack">
+              <span class="chip">Python</span>
+              <span class="chip">Java</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">SQL</span>
+              <span class="chip">HTML/CSS</span>
+              <span class="chip">C</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="h4">Frameworks / Libraries</h3>
+            <div class="stack">
+              <span class="chip">React.js</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">NumPy</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">PyTorch</span>
+              <span class="chip">Three.js</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="h4">Tools / Platforms</h3>
+            <div class="stack">
+              <span class="chip">Git</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Linux</span>
+              <span class="chip">Windows</span>
+              <span class="chip">macOS</span>
+              <span class="chip">GCP</span>
+              <span class="chip">Jupyter</span>
+              <span class="chip">Figma</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="h4">Relevant coursework</h3>
+            <ul class="bullets compact">
+              <li><strong>Artificial Intelligence:</strong> knowledge representation (predicate logic), probabilistic reasoning, ML fundamentals</li>
+              <li><strong>Software Security:</strong> vulnerability identification/mitigation, secure coding concepts, exposure to static/dynamic analysis tools</li>
+              <li><strong>Algorithms:</strong> complexity analysis, dynamic programming, reductions, NP-completeness</li>
+              <li><strong>Big Data Systems:</strong> distributed processing; Docker, HDFS, Spark, Cassandra, Kafka</li>
+              <li><strong>Machine Organization:</strong> C & assembly, caching, heap/stack behavior, performance basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>About</h2>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3 class="h4">Education</h3>
+            <p><strong>University of Wisconsin – Madison</strong></p>
+            <p class="muted">B.S. Computer Science • Sept 2021 – Dec 2024</p>
+            <ul class="bullets compact">
+              <li>GPA: 3.21 / 4.0</li>
+              <li>Honors: College of Letters &amp; Science Dean’s List</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="h4">What I’m looking for</h3>
+            <p class="muted">
+              I’m interested in software engineering roles where I can collaborate, keep leveling up, and ship work that’s used by real people.
+              I’m especially drawn to teams that value learning, clean engineering, and clear communication.
+            </p>
+            <div class="callout">
+              <p class="small">
+                If you want a quick overview, grab my resume and take a look at the three featured projects above.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p class="muted">Best way to reach me is email or LinkedIn.</p>
+        </div>
+
+        <div class="contact">
+          <a class="btn primary" href="mailto:vivak1719@gmail.com">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/vivak-haryani/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/vharyani07" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <footer class="footer">
+          <p class="muted small">
+            © <span data-year></span> Vivak Haryani • Built on GitHub Pages
+          </p>
+        </footer>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
