@@ -68,5 +68,87 @@
     // Let the hash update, but force a clean top scroll
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // Back to top button
+  const backToTop = document.createElement("button");
+  backToTop.className = "back-to-top";
+  backToTop.setAttribute("aria-label", "Back to top");
+  backToTop.innerHTML = "↑";
+  document.body.appendChild(backToTop);
+
+  // Show/hide back to top button based on scroll position
+  const toggleBackToTop = () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("visible");
+    } else {
+      backToTop.classList.remove("visible");
+    }
+  };
+
+  window.addEventListener("scroll", toggleBackToTop, { passive: true });
+  toggleBackToTop(); // Check initial state
+
+  // Scroll to top when clicked
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Image Lightbox
+  const lightbox = document.createElement("div");
+  lightbox.className = "lightbox";
+  lightbox.innerHTML = `
+    <div class="lightbox__content">
+      <button class="lightbox__close" aria-label="Close lightbox">×</button>
+      <img class="lightbox__image" src="" alt="" />
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector(".lightbox__image");
+  const lightboxClose = lightbox.querySelector(".lightbox__close");
+
+  // Function to open lightbox
+  function openLightbox(imgSrc, imgAlt) {
+    lightboxImg.src = imgSrc;
+    lightboxImg.alt = imgAlt;
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+  }
+
+  // Function to close lightbox
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = ""; // Restore scrolling
+  }
+
+  // Add click listeners to all project images
+  const projectImages = document.querySelectorAll(".project-media img");
+  projectImages.forEach((img) => {
+    img.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent card overlay click
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Close lightbox on close button click
+  lightboxClose.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeLightbox();
+  });
+
+  // Prevent closing when clicking the backdrop (removed closeLightbox on backdrop click)
+  // lightbox.addEventListener("click", closeLightbox); <--- Removed
+
+  // Prevent closing when clicking the image itself
+  lightboxImg.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // Close lightbox on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("active")) {
+      closeLightbox();
+    }
+  });
 })();
 
