@@ -901,8 +901,19 @@ section[id] {
   display: block;
 }
 
+.project-media video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
 @media (max-width: 920px) {
   .project-media img {
+    height: 190px;
+  }
+
+  .project-media video {
     height: 190px;
   }
 }
